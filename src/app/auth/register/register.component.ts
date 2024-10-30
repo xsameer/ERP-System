@@ -13,8 +13,6 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
 
-  image = 'src/assets/loginbackground.jpg';
-
   username = ''; 
   email = '';
   password = '';

@@ -1,0 +1,43 @@
+<div class="sidebar" [class.expanded]="isExpanded" (mouseenter)="expand()" (mouseleave)="collapse()">
+  <div class="logo">
+    <span *ngIf="isExpanded">Shortcut&nbsp;Links</span>
+  </div>
+  <ul class="nav-items">
+    <li>
+      <a href="/admit-card" class="nav-link">
+        <img src="assets/icons/admit-card-icon.png" alt="" />
+        <span *ngIf="isExpanded">Admit&nbsp;Card</span>
+      </a>
+    </li>
+    <li>
+      <a href="/apply-tnp" class="nav-link">
+        <img src="assets/icons/apply-tnp-icon.png" alt="" />
+        <span *ngIf="isExpanded">Apply&nbsp;TNP</span>
+      </a>
+    </li>
+    <li>
+      <a href="/assignments" class="nav-link">
+        <img src="assets/icons/assignments-icon.png" alt="" />
+        <span *ngIf="isExpanded">Assignments</span>
+      </a>
+    </li>
+    <li>
+      <a href="/attendance" class="nav-link">
+        <img src="assets/icons/attendance-icon.png" alt="" />
+        <span *ngIf="isExpanded">Attendance</span>
+      </a>
+    </li>
+    <li>
+      <a href="/feedback" class="nav-link">
+        <img src="assets/icons/feedback-icon.png" alt="" />
+        <span *ngIf="isExpanded">Feedback</span>
+      </a>
+    </li>
+    <li>
+      <a href="/lms" class="nav-link">
+        <img src="assets/icons/lms-icon.png" alt="" />
+        <span *ngIf="isExpanded">LMS</span>
+      </a>
+    </li>
+  </ul>
+</div>

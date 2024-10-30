@@ -1,0 +1,24 @@
+.dashboard-layout {
+    display: flex;
+  }
+  
+  app-sidenav {
+    position: fixed;
+    z-index: 999;
+
+  }
+  
+  .content {
+    flex: 1;
+    padding-left: 90px;
+    padding-right: 30px;
+    margin-top: 56px;
+  }
+  
+  app-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
