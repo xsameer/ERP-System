@@ -1,24 +1,50 @@
-.dashboard-layout {
-    display: flex;
-  }
-  
-  app-sidenav {
-    position: fixed;
-    z-index: 999;
+.container {
+  background-image: url('D:/erp-frontend/src/app/image/dashboard.jpg');
+  background-size: cover;
 
-  }
+}
+/* Navbar styling */
+app-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout container */
+.dashboard-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-image: url('D:/erp-frontend/src/app/image/dashboard.jpg');
+  background-size: cover;
+  margin-top: 50px; 
+  overflow: hidden; 
   
-  .content {
-    flex: 1;
-    padding-left: 90px;
-    padding-right: 30px;
-    margin-top: 56px;
-  }
+}
+
+/* Sidebar styling */
+app-sidenav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 60px;
+  height: calc(100vh - 50px); 
+  z-index: 9;
+  background-color: #f8f9fa; 
+  /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+  /* background-color: rgba(11, 173, 233, 0.5); */
+}
+
+/* Content area */
+.content {
+  height: fit-content;
+  margin-top: 50px; 
+  margin-left: 60px;
+  padding: 20px 30px;
+  flex: 1;
+  overflow-y: auto; 
   
-  app-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
-  
+}

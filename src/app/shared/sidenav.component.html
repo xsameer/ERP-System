@@ -1,42 +1,67 @@
 <div class="sidebar" [class.expanded]="isExpanded" (mouseenter)="expand()" (mouseleave)="collapse()">
-  <div class="logo">
+  <div class="nav-head">
+    <img src="https://img.icons8.com/matisse/100/sorting-options.png" alt="">
     <span *ngIf="isExpanded">Shortcut&nbsp;Links</span>
   </div>
   <ul class="nav-items">
     <li>
-      <a href="/admit-card" class="nav-link">
-        <img src="assets/icons/admit-card-icon.png" alt="" />
-        <span *ngIf="isExpanded">Admit&nbsp;Card</span>
-      </a>
-    </li>
-    <li>
-      <a href="/apply-tnp" class="nav-link">
-        <img src="assets/icons/apply-tnp-icon.png" alt="" />
-        <span *ngIf="isExpanded">Apply&nbsp;TNP</span>
-      </a>
-    </li>
-    <li>
-      <a href="/assignments" class="nav-link">
-        <img src="assets/icons/assignments-icon.png" alt="" />
-        <span *ngIf="isExpanded">Assignments</span>
+      <a href="/subject-registration" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/circnotice.png" alt="" />
+        <span *ngIf="isExpanded">Subject&nbsp;Registration</span>
       </a>
     </li>
     <li>
       <a href="/attendance" class="nav-link">
-        <img src="assets/icons/attendance-icon.png" alt="" />
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/attendance.svg" alt="" />
         <span *ngIf="isExpanded">Attendance</span>
       </a>
     </li>
     <li>
+      <a href="/college-info" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/college-info/college-profile.svg" alt="" />
+        <span *ngIf="isExpanded">college&nbsp;info</span>
+      </a>
+    </li>
+    <li>
+      <a href="/course-management" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/library.svg" alt="" />
+        <span *ngIf="isExpanded">Courses</span>
+      </a>
+    </li>
+    <li>
       <a href="/feedback" class="nav-link">
-        <img src="assets/icons/feedback-icon.png" alt="" />
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/examinations.svg" alt="" />
         <span *ngIf="isExpanded">Feedback</span>
       </a>
     </li>
     <li>
-      <a href="/lms" class="nav-link">
-        <img src="assets/icons/lms-icon.png" alt="" />
-        <span *ngIf="isExpanded">LMS</span>
+      <a href="/feedback" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/examinations.svg" alt="" />
+        <span *ngIf="isExpanded">Feedback&nbsp;Survey</span>
+      </a>
+    </li>
+    <li>
+      <a href="/fees-management" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/fees.svg" alt="" />
+        <span *ngIf="isExpanded">Fees</span>
+      </a>
+    </li>
+    <li>
+      <a href="/exam-management" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/assets/img/report.svg" alt="" />
+        <span *ngIf="isExpanded">Report&nbsp;Card</span>
+      </a>
+    </li>
+    <li>
+      <a href="/user-management" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/assignments.svg" alt="" />
+        <span *ngIf="isExpanded">Student&nbsp;Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href="/time-table" class="nav-link">
+        <img src="https://corecampus.s3.ap-south-1.amazonaws.com/images/module_images/time-table.svg" alt="" />
+        <span *ngIf="isExpanded">Time&nbsp;Table</span>
       </a>
     </li>
   </ul>
