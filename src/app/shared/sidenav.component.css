@@ -1,7 +1,7 @@
 .sidebar {
   width: 60px; 
   height: 100vh;
-  background-color: rgba(11, 173, 233, 0.4);
+  background-color: rgba(111, 34, 144, 0.4);
   color: #000000;
   overflow: hidden;
   transition: width 0.3s ease;
@@ -11,18 +11,20 @@
 }
 
 .sidebar.expanded {
-  width: 250px; 
+  width: 230px; 
 }
 
 .nav-head {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 5px;
+  background-color: rgba(255, 235, 255, 1);
+  align-items: center;
+  justify-content: center;
 }
 .nav-head img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-head span {
@@ -55,8 +57,11 @@
 }
 
 .nav-items li:hover {
-  background-color: rgba(11, 173, 233, 0.8);
-
+  /* background-color: rgba(239, 241, 247); */
+  background-color: rgba(255, 235, 255, 1);
+  /* border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px; */
+  /* border-radius: 0 15px 15px 0; */
 }
 
 .nav-link {

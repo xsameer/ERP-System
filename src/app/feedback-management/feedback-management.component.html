@@ -1,1 +1,6 @@
 <p>feedback-management works!</p>
+<div *ngIf="feedbackData">
+    <h3>Feedback Data:</h3>
+    <p>{{ feedbackData | json }}</p>
+  </div>
+  

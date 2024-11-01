@@ -1,16 +1,23 @@
 .container {
-  background-image: url('D:/erp-frontend/src/app/image/dashboard.jpg');
+  /* background-image: url('https://server12.s3.ap-south-1.amazonaws.com/dashboard.jpg'); */
   background-size: cover;
+  /* background-color: rgba(243,244,247); */
+  background-color: rgba(255, 235, 255, 0.9);
 
 }
 /* Navbar styling */
 app-navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  left: 60px;
+  margin-right: 60;
+  /* width: 100vw; */
+  width: calc(100vw - 60px);
+  z-index: 9;
+  /* background-color: black; */
+  /* background-color: #fff; */
+  /* background-color: rgba(255, 255, 255, 0); */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 /* Layout container */
@@ -18,9 +25,10 @@ app-navbar {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  background-image: url('D:/erp-frontend/src/app/image/dashboard.jpg');
+  /* background-image: url('https://server12.s3.ap-south-1.amazonaws.com/dashboard.jpg'); */
   background-size: cover;
-  margin-top: 50px; 
+  /* margin-top: 50px;  */
+
   overflow: hidden; 
   
 }
@@ -28,12 +36,13 @@ app-navbar {
 /* Sidebar styling */
 app-sidenav {
   position: fixed;
-  top: 50px;
+  top: 0;
   left: 0;
   width: 60px;
-  height: calc(100vh - 50px); 
+  /* height: calc(100vh - 50px);  */
+  height: 100vh;
   z-index: 9;
-  background-color: #f8f9fa; 
+  background-color: rgba(255, 255, 255, 0);
   /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
   /* background-color: rgba(11, 173, 233, 0.5); */
 }

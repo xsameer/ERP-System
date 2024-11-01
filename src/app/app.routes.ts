@@ -1,6 +1,8 @@
 
 import { NgModule } from '@angular/core';
+import { inject } from '@angular/core';//
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClient } from '@angular/common/http';//
 import { LoginComponent } from './auth/login/login.component'; 
 import { RegisterComponent } from './auth/register/register.component';
 import { DashboardLayoutComponent } from './dashboard/dashboard-layout/dashboard-layout.component'; 

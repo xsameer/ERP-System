@@ -1,28 +1,45 @@
-<div class="container">
-    <div class="login-container">
-        <div class="login-form">
-            <h1>Signup</h1>
+<div class="signup-page">
+    <!-- <img src="assets/images/ViceCoreLeftBg.png" alt="background-image" class="background-image"> -->
+    <img src="https://server12.s3.ap-south-1.amazonaws.com/ViceCoreLeftBg.png" alt="background-image" class="background-image">
+    
+      <div class="signup-container">
+
+          <div class="signup-right">
+              <div class="signup-logo">
+                <!-- <img src="assets/images/cutm-logo-5.png" alt="college logo" class="background-image"> -->
+                <img src="https://server12.s3.ap-south-1.amazonaws.com/cutm-logo-5.png" alt="college logo" class="college-logo">
+              </div>
+              
+              <h1>signup</h1>
             <form (ngSubmit)="onRegister()">
-                <div class="form-group">
-                    <label for="uname">Username</label>
-                    <input type="text" id="uname" [(ngModel)]="username" name="uname" class="form-input" required>
-                </div>
-                <div class="form-group">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="email" id="email" [(ngModel)]="email" name="email" class="form-input" required>
+                  </div>
+                  <div class="form-group">
                     <label for="email">Email ID</label>
                     <input type="email" id="email" [(ngModel)]="email" name="email" class="form-input" required>
-                </div>
-                <div class="form-group">
+                  </div>
+                  <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" [(ngModel)]="password" name="password" class="form-input"
-                        required>
-                </div>
-                <div class="form-group">
+                    <input type="password" id="password" [(ngModel)]="password" name="password" class="form-input" required>
+                  </div>
+                  <div class="form-group">
                     <label for="Cpassword">Confirm Password</label>
-                    <input type="password" id="Cpassword" [(ngModel)]="confirmPassword" name="Cpassword"
-                        class="form-input" required>
+                    <input type="password" id="Cpassword" [(ngModel)]="confirmPassword" name="Cpassword" class="form-input" required>
+                  </div>
                 </div>
-                <button type="submit" class="btn">Register</button>
-            </form>
-        </div>
-    </div>
-</div>
+                <div class="button-container">
+                  <button type="submit" class="signup-btn">Register</button>
+                </div>
+              </form>
+              
+          </div>
+      </div>
+  
+      <!-- <img src="assets/images/ViceCoreRightBg.png" alt="background-image" class="background-image"> -->
+      <img src="https://server12.s3.ap-south-1.amazonaws.com/ViceCoreRightBg.png" alt="background-image" class="background-image">
+      
+  </div>
+  

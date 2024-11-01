@@ -1,25 +1,42 @@
-<div class="container">
-  <div class="login-container">
-    <div class="login-form">
-      <h1>Log In</h1>
-      <form (ngSubmit)="onLogin()">
-        <div class="form-group">
-          <label for="email">Login id</label>
-          <input type="email" id="email" [(ngModel)]="email" name="email" class="form-input" required>
-        </div>
+<div class="login-page">
+  <!-- <img src="assets/images/ViceCoreLeftBg.png" alt="background-image" class="background-image"> -->
+  <img src="https://server12.s3.ap-south-1.amazonaws.com/ViceCoreLeftBg.png" alt="background-image" class="background-image">
+  
+    <div class="login-container">
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" [(ngModel)]="password" name="password" class="form-input" required>
+        <div class="login-left">
+          <!-- <img src="assets/images/ERP_1.png" alt="form image" class="background-image"> -->
+          <img src="https://server12.s3.ap-south-1.amazonaws.com/ERP_1.png" alt="form image" class="form-image">
         </div>
+        <div class="login-right">
+            <div class="login-logo">
+              <!-- <img src="assets/images/cutm-logo-5.png" alt="college logo" class="background-image"> -->
+              <img src="https://server12.s3.ap-south-1.amazonaws.com/cutm-logo-5.png" alt="college logo" class="college-logo">
+            </div>
+          <h1>Login</h1>
 
-        <button type="submit" class="btn">Log In</button>
-
-        <div class="options">
-          <a href="#">Forgot password?</a>
-          <a href="/register">Don't have account</a>
+            <form (ngSubmit)="onLogin()">
+              <div class="form-group">
+                <label for="username">Username / Login id</label>
+                <input type="email" id="email" [(ngModel)]="email" name="email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" [(ngModel)]="password" name="password" class="form-input" required>
+              </div>
+              <div class="form-options">
+                <a href="#">Forgot/Reset Password</a>
+                <a href="/register">Don't have an account?</a>
+              </div>
+              <div class="button-container">
+                <button type="submit" class="login-btn">Login</button>
+              </div>
+            </form>
+            
         </div>
-      </form>
     </div>
-  </div>
+
+    <!-- <img src="assets/images/ViceCoreRightBg.png" alt="background-image" class="background-image"> -->
+    <img src="https://server12.s3.ap-south-1.amazonaws.com/ViceCoreRightBg.png" alt="background-image" class="background-image">
+    
 </div>
