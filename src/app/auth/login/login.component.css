@@ -31,8 +31,8 @@
   background-size: contain;
 }
 .login-left .form-image {
-  height: 600px;
-  width: 700px;
+  height: 70vh;
+  width: 45vw;
   border-radius: 5px;
 }
 
@@ -46,7 +46,8 @@
   flex: 1;
   padding: 10px;
   height: fit-content;
-  width: 400px;
+  /* width: 400px; */
+  width: 26vw;
 }
 
 .login-logo {
