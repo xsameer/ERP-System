@@ -12,18 +12,17 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  image = 'src/assets/loginbackground.jpg';
-
+  
   email = '';
   password = '';
 
   constructor(private router: Router, private authService: AuthService) {}
 
   onLogin() {
-    if (this.authService.login(this.email, this.password)) {
-      this.router.navigate(['/dashboard']);
-    } else {
-      alert('Login failed. Please check your credentials.');
-    }
+    // if (this.authService.login(this.email, this.password)) {
+    //   this.router.navigate(['/dashboard']);
+    // } else {
+    //   alert('Login failed. Please check your credentials.');
+    // }
   }
 }

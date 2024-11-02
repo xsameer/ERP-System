@@ -1,30 +1,56 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { Subject, catchError, of, takeUntil, tap } from 'rxjs';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css'],
 })
-export class RegisterComponent {
-
-  username = ''; 
+export class RegisterComponent implements OnDestroy {
+  name = '';
   email = '';
   password = '';
   confirmPassword = '';
+  private destroy$ = new Subject<void>();
 
   constructor(private router: Router, private authService: AuthService) {}
 
   onRegister() {
     if (this.email && this.password && this.password === this.confirmPassword) {
-      this.router.navigate(['/login']);
+      const userData = {
+        username: this.name,
+        email: this.email,
+        password: this.password,
+      };
+
+      this.authService
+        .register(userData)
+        .pipe(
+          takeUntil(this.destroy$),
+          tap((response) => {
+            console.log('Registration successful:', response);
+            this.router.navigate(['/login']);
+          }),
+          catchError((error) => {
+            console.error('Registration failed:', error);
+            alert('Registration failed. Please try again.');
+            return of(null); // Return a fallback observable to complete the stream
+          })
+        )
+        .subscribe();
     } else {
       alert('Please ensure all fields are filled out correctly and passwords match.');
     }
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

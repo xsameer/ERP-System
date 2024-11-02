@@ -1,0 +1,137 @@
+.home-page {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 8vh;
+    padding: 5px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    text-align: center; /* Center the brand name */
+}
+
+.brand-name {
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0 auto; /* Center the brand name */
+}
+
+.nav-content {
+    position: absolute;
+    right: 10px; /* Position login button to the far right */
+    top: 50%;
+    transform: translateY(-50%); /* Center it vertically */
+}
+
+.button {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+
+
+.hero {
+    background: url('https://server12.s3.ap-south-1.amazonaws.com/home-page.jpg') no-repeat center center fixed;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.hero-content h2 {
+    color: white;
+    text-align: center;
+}
+
+.hero-button {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 90px;
+
+
+}
+
+.button {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-h {
+
+    padding: 20px;
+    font-size: 2rem;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.about-h h2 {
+    white-space: nowrap;
+}
+
+.about-p {
+    display: block;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    font-size: 14px;
+}
+
+.footer-team {
+    font-size: 14px;
+    text-align: right;
+}

@@ -16,10 +16,13 @@ import { SubjectRegistrationComponent } from './subject-registration/subject-reg
 import { UserManagementComponent } from './user-management/user-management.component';
 import { FeesManagementComponent } from './fees-management/fees-management.component';
 import { ExamManagementComponent } from './exam-management/exam-management.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/home-page', pathMatch: 'full' },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'home-page', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'course-management', component: CourseManagementComponent }, 
   { path: 'attendance', component: AttendanceComponent },
