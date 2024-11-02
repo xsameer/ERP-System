@@ -7,8 +7,10 @@
 }
 
 .login-container {
-  width: fit-content;
-  height: fit-content;
+  /* width: fit-content; */
+  width: 74vw;
+  /* height: fit-content; */
+  height: 74vh;
   padding: 2px;
   position: fixed;
   z-index: 1;
@@ -20,8 +22,11 @@
 }
 
 .login-left {
-  height: fit-content;
-  width: fit-content;
+  /* height: fit-content; */
+  height: 73vh;
+  /* width: fit-content; */
+  width: 73vw;
+
   flex: 1;
   background-color: white;
   border: 5px solid white;
@@ -31,8 +36,10 @@
   background-size: contain;
 }
 .login-left .form-image {
-  height: 70vh;
-  width: 45vw;
+  /* height: 600px; */
+  height: 73vh;
+  /* width: 700px; */
+  width: 46vw;
   border-radius: 5px;
 }
 
@@ -46,8 +53,10 @@
   flex: 1;
   padding: 10px;
   height: fit-content;
-  /* width: 400px; */
-  width: 26vw;
+  /* height: 30vh; */
+  width: 400px;
+  /* width: 40vw; */
+
 }
 
 .login-logo {

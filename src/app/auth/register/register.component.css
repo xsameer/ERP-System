@@ -9,7 +9,8 @@
 .signup-container {
   /* width: 600px; */
   width: 40vw;
-  height: fit-content;
+  /* height: fit-content; */
+  height: 60vh;
   padding: 2px;
   position: fixed;
   z-index: 1;
