@@ -6,24 +6,34 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  // private baseUrl = 'http://localhost:8080/api';
+
   private backendUrl = 'http://localhost:8080/api';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  
+
   registerUser(user: any): Observable<any> {
     return this.http.post(`${this.backendUrl}/register`, user);
   }
-  
+
   // Define additional methods as needed
   getMessage(): Observable<any> {
     return this.http.get(`${this.backendUrl}/message`);
   }
 
+
+  // api.service.ts
+  getAllSubjects(): Observable<any> {
+    return this.http.get(`${this.backendUrl}/subjects`);
+  }
+
+  // getSubjects(): Observable<any[]> {
+  //   return this.http.get<any[]>(`${this.backendUrl}/subjects`);
+  // }
+
   // login(email: string, password: string): Observable<any> {
   //   const loginData = { email, password };
   //   return this.http.post(`${environment.apiUrl}/login`, loginData);
   // }
-  
+
 }

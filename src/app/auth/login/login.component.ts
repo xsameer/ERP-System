@@ -19,10 +19,15 @@ export class LoginComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
   onLogin() {
-    // if (this.authService.login(this.email, this.password)) {
-    //   this.router.navigate(['/dashboard']);
-    // } else {
-    //   alert('Login failed. Please check your credentials.');
-    // }
+    this.authService.login(this.email, this.password).subscribe(
+      (response) => {
+        console.log('Login successful:', response);
+        this.router.navigate(['/dashboard']); // Adjust the route as needed
+      },
+      (error) => {
+        console.error('Login failed:', error);
+        alert('Login failed. Please check your credentials.');
+      }
+    );
   }
 }

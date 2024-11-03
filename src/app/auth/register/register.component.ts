@@ -24,11 +24,11 @@ export class RegisterComponent implements OnDestroy {
   onRegister() {
     if (this.email && this.password && this.password === this.confirmPassword) {
       const userData = {
-        username: this.name,
+        name: this.name, // Now matches backend expected name
         email: this.email,
         password: this.password,
       };
-
+      
       this.authService
         .register(userData)
         .pipe(
@@ -40,10 +40,11 @@ export class RegisterComponent implements OnDestroy {
           catchError((error) => {
             console.error('Registration failed:', error);
             alert('Registration failed. Please try again.');
-            return of(null); // Return a fallback observable to complete the stream
+            return of(null);
           })
         )
         .subscribe();
+      
     } else {
       alert('Please ensure all fields are filled out correctly and passwords match.');
     }

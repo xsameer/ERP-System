@@ -1,1 +1,21 @@
-<p>subject-registration works!</p>
+<div class="container">
+  <app-navbar></app-navbar>
+  <div class="dashboard-layout">
+    <app-sidenav></app-sidenav>
+    <div class="content">
+      <h2 class="header">Available Subjects</h2> <!-- Added class for styling -->
+      <div class="subject-list">
+        <div class="subject-card" *ngFor="let subject of subjects">
+          <h3 class="subject-title">{{ subject.title }} <span class="course-code">({{ subject.courseCode }})</span></h3>
+          <p class="description"><strong>Description:</strong> {{ subject.description }}</p>
+          <p class="credits"><strong>Credits:</strong> {{ subject.credit }}</p>
+          <p class="instructor"><strong>Instructor:</strong> {{ subject.instructor }}</p>
+          <div class="button-group">
+            <button class="apply-button" (click)="applySubject(subject)">Apply</button>
+            <button class="cancel-button" (click)="cancelSubject(subject)">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
