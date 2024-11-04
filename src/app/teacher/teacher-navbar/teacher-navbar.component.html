@@ -1,0 +1,23 @@
+<nav class="custom-navbar custom-navbar-expand bg-custom-dark">
+    <div class="custom-container">
+        <ul class="custom-navbar-nav">
+            <li class="custom-nav-item">
+                <a class="custom-nav-link active" href="/teacher">Menu</a>
+            </li>
+            <li class="custom-nav-item">
+                <a class="custom-nav-link" href="#">Home</a>
+            </li>
+            <li class="custom-nav-item">
+                <a class="custom-nav-link" href="#">Notifications</a>
+            </li>
+        </ul>
+        <form class="custom-form">
+          
+          <span *ngIf="currentUserName; else noUser">Welcome, {{ currentUserName }}</span>
+          <ng-template #noUser><span>Loading user...</span></ng-template>
+  
+          <button class="custom-btn" type="button" (click)="onLogoff()">Logout</button>
+        </form>
+    </div>
+  </nav>
+  
