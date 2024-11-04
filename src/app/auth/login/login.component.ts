@@ -13,6 +13,25 @@ import { CommonModule } from '@angular/common';
 })
 export class LoginComponent {
   
+  // email = '';
+  // password = '';
+
+  // constructor(private router: Router, private authService: AuthService) {}
+
+  // onLogin() {
+  //   this.authService.login(this.email, this.password).subscribe(
+  //     (response) => {
+  //       console.log('Login successful:', response);
+  //       this.router.navigate(['/dashboard']); // Adjust the route as needed
+        
+  //     },
+  //     (error) => {
+  //       console.error('Login failed:', error);
+  //       alert('Login failed. Please check your credentials.');
+  //     }
+  //   );
+  // }
+
   email = '';
   password = '';
 
@@ -22,7 +41,23 @@ export class LoginComponent {
     this.authService.login(this.email, this.password).subscribe(
       (response) => {
         console.log('Login successful:', response);
-        this.router.navigate(['/dashboard']); // Adjust the route as needed
+        localStorage.setItem('userRole', response.role); // Store role
+
+        // Redirect based on user role
+        switch (response.role) {
+          case 'student':
+            this.router.navigate(['/dashboard']);
+            break;
+          case 'teacher':
+            this.router.navigate(['/teacher']);
+            break;
+          case 'admin':
+            this.router.navigate(['/admin']);
+            break;
+          default:
+            this.router.navigate(['/']); // Fallback route
+            break;
+        }
       },
       (error) => {
         console.error('Login failed:', error);
