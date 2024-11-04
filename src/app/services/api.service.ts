@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.post(`${this.backendUrl}/register`, user);
   }
 
-  // Define additional methods as needed
+  // trying api
   getMessage(): Observable<any> {
     return this.http.get(`${this.backendUrl}/message`);
   }

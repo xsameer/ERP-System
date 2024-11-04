@@ -13,7 +13,7 @@ import { TimeTableComponent } from './time-table/time-table.component';
 import { FeedbackManagementComponent } from './feedback-management/feedback-management.component';
 import { CollegeInfoComponent } from './college-info/college-info.component';
 import { SubjectRegistrationComponent } from './subject-registration/subject-registration.component';
-import { UserManagementComponent } from './user-management/user-management.component';
+import { ProfileManagementComponent } from './profile-management/profile-management.component';
 import { FeesManagementComponent } from './fees-management/fees-management.component';
 import { ExamManagementComponent } from './exam-management/exam-management.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -37,7 +37,7 @@ export const routes: Routes = [
   { path: 'feedback-management', component: FeedbackManagementComponent},
   { path: 'college-info', component: CollegeInfoComponent},
   { path: 'subject-registration', component: SubjectRegistrationComponent},
-  { path: 'user-management', component: UserManagementComponent},
+  { path: 'profile-management', component: ProfileManagementComponent},
   { path: 'fees-management', component: FeesManagementComponent},
   { path: 'exam-management', component: ExamManagementComponent},
   {
@@ -54,7 +54,7 @@ export const routes: Routes = [
       { path: 'feedback-management', component: FeedbackManagementComponent },
       { path: 'college-info', component: CollegeInfoComponent },
       { path: 'subject-registration', component: SubjectRegistrationComponent },
-      { path: 'user-management', component: UserManagementComponent},
+      { path: 'profile-management', component: ProfileManagementComponent},
       { path: 'fees-management', component: FeesManagementComponent},
       { path: 'exam-management', component: ExamManagementComponent},
     ]
