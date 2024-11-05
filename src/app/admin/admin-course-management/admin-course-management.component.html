@@ -1,2 +1,22 @@
 <app-admin-navbar></app-admin-navbar>
-<p>admin-course-management works!</p>
+<h2>Pending Subject Registrations</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Subject</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registration of pendingRegistrations">
+      <td>{{ registration.student.name }}</td>
+      <td>{{ registration.subject.title }}</td>
+      <td>{{ registration.status }}</td>
+      <td>
+        <button (click)="approveRegistration(registration.id)">Approve</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

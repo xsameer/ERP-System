@@ -21,7 +21,7 @@ export class FeedbackManagementComponent implements OnInit{
 
   fetchFeedback() {
     this.apiService.getMessage().subscribe({
-      next: (data) => (this.feedbackData = data),
+      next: (data: any) => (this.feedbackData = data),
       error: (error) => console.error('Error fetching feedback:', error)
     });
   }

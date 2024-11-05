@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
@@ -18,14 +18,12 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit() {
     // Subscribe to the currentUser observable to get the user's name
-    this.authService.currentUser$.subscribe(name => {
-      this.currentUserName = name;
+    this.authService.currentUser$.subscribe(user => {
+      this.currentUserName = user ? user.name : null;
       // console.log("Current User Name:", this.currentUserName);
     });
   }
 
-
-  
   isExpanded = false;
 
   expand() {

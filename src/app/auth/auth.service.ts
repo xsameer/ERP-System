@@ -10,17 +10,16 @@ import { tap } from 'rxjs/operators';
 export class AuthService {
   private backendUrl = 'http://localhost:8080/api/register';
   private loginUrl = 'http://localhost:8080/api/login';
-  private localStorageKey = 'currentUserName'; // Key for localStorage
+  private localStorageKey = 'currentUser';
 
-  private currentUserSubject = new BehaviorSubject<string | null>(null);
+  private currentUserSubject = new BehaviorSubject<{ userId: number, name: string } | null>(null);
   currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object) {
-    // Retrieve user name from localStorage only in the browser
     if (isPlatformBrowser(this.platformId)) {
-      const storedUserName = localStorage.getItem(this.localStorageKey);
-      if (storedUserName) {
-        this.currentUserSubject.next(storedUserName);
+      const storedUser = localStorage.getItem(this.localStorageKey);
+      if (storedUser) {
+        this.currentUserSubject.next(JSON.parse(storedUser));
       }
     }
   }
@@ -33,10 +32,11 @@ export class AuthService {
     const loginData = { email, password };
     return this.http.post<any>(this.loginUrl, loginData).pipe(
       tap((response) => {
-        if (response && response.name) {
-          this.currentUserSubject.next(response.name); // Set the logged-in user's name
+        if (response && response.userId && response.name) {
+          const currentUser = { userId: response.userId, name: response.name };
+          this.currentUserSubject.next(currentUser);
           if (isPlatformBrowser(this.platformId)) {
-            localStorage.setItem(this.localStorageKey, response.name); // Save to localStorage
+            localStorage.setItem(this.localStorageKey, JSON.stringify(currentUser));
           }
         }
       })
@@ -44,9 +44,13 @@ export class AuthService {
   }
 
   logout() {
-    this.currentUserSubject.next(null); // Clear user on logout
+    this.currentUserSubject.next(null);
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.removeItem(this.localStorageKey); // Remove from localStorage
+      localStorage.removeItem(this.localStorageKey);
     }
+  }
+
+  getCurrentUserId(): number | null {
+    return this.currentUserSubject.value?.userId ?? null;
   }
 }

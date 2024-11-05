@@ -1,1 +1,23 @@
-<p>course-management works!</p>
+<app-navbar></app-navbar>
+<h2>Approved Subject Registrations</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>Subject</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registration of approvedRegistrations">
+      <td>{{ registration.student.name }}</td>
+      <td>{{ registration.subject.title }}</td>
+      <!-- Apply appropriate class based on the status -->
+      <td [class.status-approved]="registration.status === 'approved'"
+          [class.status-pending]="registration.status === 'pending'"
+          [class.status-rejected]="registration.status === 'rejected'">
+        {{ registration.status }}
+      </td>
+    </tr>
+  </tbody>
+</table>

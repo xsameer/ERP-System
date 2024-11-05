@@ -18,8 +18,8 @@ export class AdminNavbarComponent implements OnInit {
 
   ngOnInit() {
     // Subscribe to the currentUser observable to get the user's name
-    this.authService.currentUser$.subscribe(name => {
-      this.currentUserName = name;
+    this.authService.currentUser$.subscribe(user => {
+      this.currentUserName = user ? user.name : null;
       // console.log("Current User Name:", this.currentUserName);
     });
   }
